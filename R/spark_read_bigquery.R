@@ -51,7 +51,7 @@
 #' @family Spark serialization routines
 #' @seealso \code{\link[sparklyr]{spark_read_source}}, \code{\link{spark_write_bigquery}},
 #' \code{\link{bigquery_defaults}}
-#' @keywords database, connection
+#' @keywords database connection
 #' @examples
 #' \dontrun{
 #' config <- spark_config()
@@ -92,6 +92,7 @@ spark_read_bigquery <- function(sc, name, billingProjectId = default_billing_pro
     "bq.project" = billingProjectId,
     "bq.staging_dataset.gcs_bucket" = gcsBucket,
     "bq.location" = default_dataset_location(),
+    "bq.service_account_key_file" = serviceAccountKeyFile,
     "type" = type
   ), additionalParameters)
 

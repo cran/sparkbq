@@ -2,7 +2,7 @@
 
 # sparkbq: Google BigQuery Support for sparklyr
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/sparkbq)](https://cran.r-project.org/package=sparkbq)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/sparkbq)](https://cran.r-project.org/package=sparkbq) [![Rdoc](http://www.rdocumentation.org/badges/version/sparkbq)](http://www.rdocumentation.org/packages/sparkbq)
 
 **sparkbq** is a [sparklyr](https://spark.rstudio.com/) [extension](https://spark.rstudio.com/articles/guides-extensions.html) package providing an integration with [Google BigQuery](https://cloud.google.com/bigquery/). It builds on top of [spark-bigquery](https://github.com/miraisolutions/spark-bigquery), which provides a Google BigQuery data source to [Apache Spark](https://spark.apache.org/).
 
@@ -71,11 +71,13 @@ spark_write_bigquery(
   mode = "overwrite")
 ```
 
-
 ## Authentication
 
-When running outside of Google Cloud it is necessary to specify a service account JSON key file. Information on how to generate service account credentials can be found at https://cloud.google.com/storage/docs/authentication#service_accounts. The service account key file can either be passed as parameter `serviceAccountKeyFile` to `bigquery_defaults` or directly to `spark_read_bigquery` and `spark_write_bigquery`. Alternatively, an environment variable `export GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service_account_keyfile.json` can be set (see https://cloud.google.com/docs/authentication/getting-started for more information). When running on Google Cloud, e.g. Google Cloud Dataproc, application default credentials (ADC) may be used in which case it is not necessary to specify a service account key file.
+When running outside of Google Cloud it is necessary to specify a service account JSON key file. The service account key file can be passed as parameter `serviceAccountKeyFile` to `bigquery_defaults` or directly to `spark_read_bigquery` and `spark_write_bigquery`.
 
+Alternatively, an environment variable `export GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service_account_keyfile.json` can be set (see https://cloud.google.com/docs/authentication/getting-started for more information). Make sure the variable is set before starting the R session.
+
+When running on Google Cloud, e.g. Google Cloud Dataproc, application default credentials (ADC) may be used in which case it is not necessary to specify a service account key file.
 
 ## Further Information
 

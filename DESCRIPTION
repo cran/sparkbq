@@ -1,8 +1,7 @@
 Package: sparkbq
 Type: Package
 Title: Google 'BigQuery' Support for 'sparklyr'
-Version: 0.1.0
-Date: 2018-07-31
+Version: 0.1.1
 Authors@R: c(person(family = "Mirai Solutions GmbH", role = "aut",
                     email = "info@mirai-solutions.com"),
              person("Martin", "Studer", role = "cre",
@@ -23,13 +22,13 @@ License: GPL-3 | file LICENSE
 SystemRequirements: Spark (>= 2.2.x)
 Encoding: UTF-8
 LazyData: yes
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2018-07-31 16:17:56 UTC; mstuder
+Packaged: 2019-12-18 17:03:34 UTC; simon
 Author: Mirai Solutions GmbH [aut],
   Martin Studer [cre],
   Nicola Lambiase [ctb],
   Omer Demirel [ctb]
 Maintainer: Martin Studer <martin.studer@mirai-solutions.com>
 Repository: CRAN
-Date/Publication: 2018-08-02 11:40:02 UTC
+Date/Publication: 2019-12-18 18:00:02 UTC
